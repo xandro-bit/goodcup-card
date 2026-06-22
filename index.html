@@ -98,7 +98,7 @@
   /* ---- TITLES ---- */
   .titles {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     animation: fade 0.8s ease 0.34s both;
   }
 
@@ -115,6 +115,65 @@
   .titles .org {
     color: var(--black);
     font-weight: 500;
+  }
+
+  .titles .cred-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .titles .cred-link:hover,
+  .titles .cred-link:focus-visible {
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    outline: none;
+  }
+
+  /* ---- WRITING / PRESS ---- */
+  .press {
+    text-align: center;
+    margin-bottom: 2.2rem;
+    line-height: 1.55;
+    animation: fade 0.8s ease 0.4s both;
+  }
+
+  .press .eyebrow {
+    display: block;
+    font-size: 0.56rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 0.5rem;
+  }
+
+  .press a {
+    display: inline-block;
+    max-width: 30ch;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    transition: color 0.25s ease;
+  }
+
+  .press a:hover,
+  .press a:focus-visible {
+    color: var(--accent);
+    outline: none;
+  }
+
+  .press .press-arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+  }
+
+  .press a:hover .press-arrow {
+    transform: translateX(3px);
   }
 
   /* ---- CONTACT ICONS ---- */
@@ -241,8 +300,13 @@
     <div class="titles">
       <p>Head Roaster &amp; R&amp;D</p>
       <p class="org">Good Cup Coffee Co.</p>
-      <p>Certified Loring Trainer</p>
+      <p><a class="cred-link" href="https://loring.com/loring-certified/" target="_blank" rel="noopener">Certified Loring Trainer</a></p>
     </div>
+
+    <p class="press">
+      <span class="eyebrow">Writing</span>
+      <a href="https://www.rappler.com/people/how-mindanao-coffee-farmers-reclaimed-place-world-stage/" target="_blank" rel="noopener">“How Mindanao’s coffee farmers reclaimed their place on the world stage” — Rappler <span class="press-arrow">→</span></a>
+    </p>
 
     <nav class="icons" aria-label="Contact">
       <a href="tel:+639065941837" aria-label="Call +63 906 594 1837">
